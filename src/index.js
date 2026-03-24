@@ -19,8 +19,8 @@ app.get("/todos", (req, res) => {
 app.post("/todos", (req, res) => {
   const { title } = req.body;
 
-  if (!title || typeof title !== "string" || !title.trim()) {
-    return res.status(400).json({ error: "title is required" });
+  if (!title || typeof title !== "string" || title.trim()) {
+    return res.status(400).json({ error: "title is required  " });
   }
 
   const todo = {

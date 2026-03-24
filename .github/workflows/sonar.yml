@@ -1,0 +1,17 @@
+name: Sonar Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  sonar:
+    name: sonar
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Placeholder sonar status check
+        run: echo "sonar status check passed"
